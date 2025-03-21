@@ -17,7 +17,7 @@ public class LoginController {
 
     private final PasswordEncoder passwordEncoder;
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{userId}")
     public ResponseEntity<User> getUserById(@PathVariable int id) {
 
             User user = loginService.getUserById(id);
