@@ -30,7 +30,7 @@ public class SearchController {
         }
     }
 
-    @GetMapping(value = "/{userId}/startWith/{productName}")
+    @GetMapping(value = "/{userId}/startsWith/{productName}")
     public ResponseEntity<List<Product>> allProductsThatStartWith(@PathVariable int userId,@PathVariable String productName){
         return ResponseEntity.ok(searchService.allProductsThatStartWith(userId,productName));
     }
