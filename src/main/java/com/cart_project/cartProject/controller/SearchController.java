@@ -20,7 +20,7 @@ public class SearchController {
     private final SearchService searchService;
 
     @GetMapping(value = "/product")
-    public ResponseEntity<List<Product>> productWithInPriceRange(@RequestParam int userId,@RequestParam String productName, @RequestParam double leastPrice, @RequestParam double highPrice){
+    public ResponseEntity<List<Product>> productWithInPriceRanges(@RequestParam int userId,@RequestParam String productName, @RequestParam double leastPrice, @RequestParam double highPrice){
         try {
             return ResponseEntity.ok(searchService.productWithInPriceRange(userId,productName,leastPrice,highPrice));
 
